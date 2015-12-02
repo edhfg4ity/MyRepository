@@ -16,6 +16,7 @@ public class userService {
 	@Resource(name="userDao")
 	public void setUserDao(UserDao userDao) {
 		this.userDao = userDao;
+		System.out.print("ahaha");
 	}
 	
 	
