@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+  	<!-- 注解加的这几句放哪都可以 -->
+   <context:annotation-config />
+	<context:component-scan base-package="com.SH"/>
+  	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost/hibernate"/>
+        <property name="username" value="root"/>
+        <property name="password" value="740491"/>
+    </bean>
+ 	<!-- 这个sessionFactory默认就支持注解 -->
+ 	<!--缺少包一般会抛ClassNotFoundException  -->
+    <bean id="mySessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="annotatedClasses">
+            <list>
+                <value>com.SH.model.user</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+        	<props>
+        	<!-- 方言错了会抛Unknown table ‘system_sequences’ in information_schema错误 -->
+	            <prop key="hibernate.dialect"> org.hibernate.dialect.MySQLDialect </prop>
+	            <prop key="hibernate.show_sql">true</prop>  
+	            <prop key="hibernate.format_sql">true</prop>  
+	            <prop key="hibernate.hbm2ddl.auto">update</prop> 
+            </props> 
+        </property>
+    </bean>
+  	
+
+</beans>

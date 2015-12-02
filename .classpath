@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/spring"/>
+	<classpathentry kind="lib" path="E:/MyJar/aspectjweaver-1.6.12.jar"/>
+	<classpathentry kind="lib" path="E:/MyJar/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="E:/MyJar/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="E:/MyJar/mysql-connector-java-5.1.26-bin.jar"/>
+	<classpathentry kind="lib" path="E:/MyJar/spring.jar"/>
+	<classpathentry kind="lib" path="E:/CS/马士兵Spring3.0/马士兵Spring3.0源码/尚学堂马士兵_Spring_00_项目源码/res/s2sh_jar/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="E:/CS/马士兵Spring3.0/马士兵Spring3.0源码/尚学堂马士兵_Spring_00_项目源码/res/s2sh_jar/commons-pool.jar"/>
+	<classpathentry kind="lib" path="E:/CS/马士兵Spring3.0/马士兵Spring3.0源码/尚学堂马士兵_Spring_00_项目源码/res/s2sh_jar/commons-dbcp.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
