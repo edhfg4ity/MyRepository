@@ -24,6 +24,7 @@ public class userDaoImp implements UserDao{
 		session.save(u);
 		session.getTransaction().commit();
 		System.out.print("user saved");
+		System.out.print("test");
 	}
 
 }
